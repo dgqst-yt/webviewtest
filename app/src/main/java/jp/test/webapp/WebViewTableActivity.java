@@ -1,17 +1,18 @@
 package jp.test.webapp;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-public class WebViewActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class WebViewTableActivity extends AppCompatActivity {
 
     WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.webviewlayout);
+        setContentView(R.layout.webviewlayouttable);
 
 
 
