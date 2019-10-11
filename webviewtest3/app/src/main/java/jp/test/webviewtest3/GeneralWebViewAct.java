@@ -32,12 +32,12 @@ public class GeneralWebViewAct extends Activity {
 
         myWebView.getSettings().setJavaScriptEnabled(true);
 
-        myWebView.setWebViewClient(new WebViewClient(){
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String urlStr) {
-                return false;
-            }
-        });
+//        myWebView.setWebViewClient(new WebViewClient(){
+//            @Override
+//            public boolean shouldOverrideUrlLoading(WebView view, String urlStr) {
+//                return false;
+//            }
+//        });
 
         findViewById(R.id.btn_home).setOnClickListener(new View.OnClickListener(){
             @Override
