@@ -11,19 +11,26 @@ public class GeneralWebViewAct extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.webviewbtn);
 
         CreateWebView();
     }
 
+    protected void CreateWebView(){
+        setContentView(R.layout.webviewbtn);
 
-    private void CreateWebView(){
         final String D_HOME_URL = "https://www.ena.travel/sp/";
         //final String D_HOME_URL = "http://www.yahoo.co.jp/";
 
         final WebView myWebView = (WebView) findViewById(R.id.webview);
 
+        CreateWebViewButtonEvent(myWebView, D_HOME_URL);
 
+        myWebView.loadUrl(D_HOME_URL);
+    }
+
+    protected void CreateWebViewButtonEvent(final WebView myWebView, final String home_url){
+
+        myWebView.getSettings().setJavaScriptEnabled(true);
 
         myWebView.setWebViewClient(new WebViewClient(){
             @Override
@@ -32,11 +39,10 @@ public class GeneralWebViewAct extends Activity {
             }
         });
 
-
         findViewById(R.id.btn_home).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                myWebView.loadUrl(D_HOME_URL);
+                myWebView.loadUrl(home_url);
             }
         });
         findViewById(R.id.btn_prev).setOnClickListener(new View.OnClickListener(){
@@ -58,8 +64,5 @@ public class GeneralWebViewAct extends Activity {
             }
         });
 
-
-        myWebView.loadUrl(D_HOME_URL);
     }
-
 }

@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GeneralWebViewAct"></activity>
+        <activity android:name=".GeneralWebViewActInherit"></activity>
     </application>
 
 </manifest>

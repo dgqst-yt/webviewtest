@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart(){
         super.onStart();
-        Intent activity = new Intent(this, GeneralWebViewAct.class);
+        //Intent activity = new Intent(this, GeneralWebViewAct.class);
+        Intent activity = new Intent(this, GeneralWebViewActInherit.class);
         startActivity(activity);
     }
 
